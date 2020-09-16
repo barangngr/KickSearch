@@ -18,6 +18,10 @@
 		66C24DF72512355500B692D7 /* SearchViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24DF62512355500B692D7 /* SearchViewPresenter.swift */; };
 		66C24DFA2512538700B692D7 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24DF92512538700B692D7 /* Requests.swift */; };
 		66C24DFD251253CD00B692D7 /* MainResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24DFC251253CD00B692D7 /* MainResponse.swift */; };
+		66C24E0125125CA100B692D7 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24DFF25125CA100B692D7 /* MainTableViewCell.swift */; };
+		66C24E0225125CA100B692D7 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C24E0025125CA100B692D7 /* MainTableViewCell.xib */; };
+		66C24E062512620E00B692D7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24E052512620E00B692D7 /* Date.swift */; };
+		66C24E082512624900B692D7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24E072512624900B692D7 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		66C24DF62512355500B692D7 /* SearchViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewPresenter.swift; sourceTree = "<group>"; };
 		66C24DF92512538700B692D7 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		66C24DFC251253CD00B692D7 /* MainResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResponse.swift; sourceTree = "<group>"; };
+		66C24DFF25125CA100B692D7 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		66C24E0025125CA100B692D7 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		66C24E052512620E00B692D7 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		66C24E072512624900B692D7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,7 @@
 				66C24DF3251233A700B692D7 /* App */,
 				66C24DF82512533600B692D7 /* API */,
 				66C24DFB251253AF00B692D7 /* Models */,
+				66C24E03251261F400B692D7 /* Helpers */,
 				66C24DF1251232EE00B692D7 /* Scenes */,
 				66C24DF2251232F100B692D7 /* Resources */,
 				66C24DCF2512326800B692D7 /* Info.plist */,
@@ -164,6 +173,7 @@
 		66C24DF4251234DE00B692D7 /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
+				66C24DFE25125C7E00B692D7 /* Cells */,
 				66C24DC52512326300B692D7 /* SearchViewController.swift */,
 				66C24DF62512355500B692D7 /* SearchViewPresenter.swift */,
 			);
@@ -191,6 +201,32 @@
 				66C24DFC251253CD00B692D7 /* MainResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		66C24DFE25125C7E00B692D7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				66C24DFF25125CA100B692D7 /* MainTableViewCell.swift */,
+				66C24E0025125CA100B692D7 /* MainTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		66C24E03251261F400B692D7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				66C24E04251261F900B692D7 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		66C24E04251261F900B692D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				66C24E052512620E00B692D7 /* Date.swift */,
+				66C24E072512624900B692D7 /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +335,7 @@
 			files = (
 				66C24DCE2512326800B692D7 /* LaunchScreen.storyboard in Resources */,
 				66C24DCB2512326800B692D7 /* Assets.xcassets in Resources */,
+				66C24E0225125CA100B692D7 /* MainTableViewCell.xib in Resources */,
 				66C24DC92512326300B692D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,9 +364,12 @@
 				66C24DC62512326300B692D7 /* SearchViewController.swift in Sources */,
 				66C24DF72512355500B692D7 /* SearchViewPresenter.swift in Sources */,
 				66C24DC22512326300B692D7 /* AppDelegate.swift in Sources */,
+				66C24E082512624900B692D7 /* String.swift in Sources */,
+				66C24E0125125CA100B692D7 /* MainTableViewCell.swift in Sources */,
 				66C24DFA2512538700B692D7 /* Requests.swift in Sources */,
 				66C24DC42512326300B692D7 /* SceneDelegate.swift in Sources */,
 				66C24DFD251253CD00B692D7 /* MainResponse.swift in Sources */,
+				66C24E062512620E00B692D7 /* Date.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

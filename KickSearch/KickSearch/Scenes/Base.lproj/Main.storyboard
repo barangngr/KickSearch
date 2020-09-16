@@ -50,16 +50,31 @@
                                     <constraint firstAttribute="height" constant="45" id="sx1-uQ-7ZI"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vxZ-Rs-Sgq">
+                                <rect key="frame" x="0.0" y="133" width="414" height="763"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="0gH-Kt-Qs0"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="R8H-uk-hNg"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="vxZ-Rs-Sgq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5yr-vq-d3M"/>
                             <constraint firstItem="VEH-Xs-nTw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gcq-b5-Gmz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VEH-Xs-nTw" secondAttribute="trailing" id="Vol-HZ-yrg"/>
                             <constraint firstItem="VEH-Xs-nTw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="e3p-1y-ljt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vxZ-Rs-Sgq" secondAttribute="bottom" constant="-34" id="hL1-8x-AfE"/>
+                            <constraint firstItem="vxZ-Rs-Sgq" firstAttribute="top" secondItem="VEH-Xs-nTw" secondAttribute="bottom" id="jwL-hq-Qcg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vxZ-Rs-Sgq" secondAttribute="trailing" id="tMi-fv-brs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="iMA-83-eHT"/>
+                    <connections>
+                        <outlet property="tableView" destination="vxZ-Rs-Sgq" id="y0c-tP-3ve"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

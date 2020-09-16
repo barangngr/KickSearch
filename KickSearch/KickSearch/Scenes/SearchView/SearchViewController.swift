@@ -12,9 +12,9 @@ class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        Request.shared.getData { (isSuccess, response) in
+            print("")
+        }
     }
 
-
 }
-

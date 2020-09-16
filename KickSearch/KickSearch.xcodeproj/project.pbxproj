@@ -99,13 +99,9 @@
 		66C24DC02512326300B692D7 /* KickSearch */ = {
 			isa = PBXGroup;
 			children = (
-				66C24DC12512326300B692D7 /* AppDelegate.swift */,
-				66C24DC32512326300B692D7 /* SceneDelegate.swift */,
-				66C24DC52512326300B692D7 /* ViewController.swift */,
-				66C24DC72512326300B692D7 /* Main.storyboard */,
-				66C24DCA2512326800B692D7 /* Assets.xcassets */,
-				66C24DCC2512326800B692D7 /* LaunchScreen.storyboard */,
-				66C24DCF2512326800B692D7 /* Info.plist */,
+				66C24DF3251233A700B692D7 /* App */,
+				66C24DF1251232EE00B692D7 /* Scenes */,
+				66C24DF2251232F100B692D7 /* Resources */,
 			);
 			path = KickSearch;
 			sourceTree = "<group>";
@@ -126,6 +122,34 @@
 				66C24DE52512326800B692D7 /* Info.plist */,
 			);
 			path = KickSearchUITests;
+			sourceTree = "<group>";
+		};
+		66C24DF1251232EE00B692D7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				66C24DC72512326300B692D7 /* Main.storyboard */,
+				66C24DC52512326300B692D7 /* ViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		66C24DF2251232F100B692D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66C24DCA2512326800B692D7 /* Assets.xcassets */,
+				66C24DCC2512326800B692D7 /* LaunchScreen.storyboard */,
+				66C24DCF2512326800B692D7 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		66C24DF3251233A700B692D7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				66C24DC12512326300B692D7 /* AppDelegate.swift */,
+				66C24DC32512326300B692D7 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -21,6 +21,9 @@
                                     <searchBar contentMode="redraw" barStyle="blackTranslucent" placeholder="Search Project" translatesAutoresizingMaskIntoConstraints="NO" id="2Cy-B3-TvM">
                                         <rect key="frame" x="0.0" y="0.0" width="321" height="45"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="GJ6-W5-Xfv"/>
+                                        </connections>
                                     </searchBar>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icj-sJ-Xcs" userLabel="SortButton">
                                         <rect key="frame" x="326" y="6" width="35" height="33"/>

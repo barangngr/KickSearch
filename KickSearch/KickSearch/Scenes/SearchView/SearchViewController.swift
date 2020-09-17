@@ -12,7 +12,8 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var tableViewData: [MainResponse] = []
+    private var mainData: [MainResponse] = []
+    private var filteredData: [MainResponse] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +30,20 @@ class SearchViewController: UIViewController {
         Request.shared.getData { (isSuccess, response) in
             print("")
             if isSuccess {
-                self.tableViewData = response!
+                self.mainData = response!
+                self.filteredData = self.mainData
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    private func setNumberOfRows() -> Int {
+        if filteredData.count == 0 {
+            self.tableView.setEmptyMessage("Upps! No such thing")
+        } else {
+            self.tableView.restore()
+        }
+        return filteredData.count
     }
 
 }
@@ -41,12 +52,12 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableViewData.count
+       return setNumberOfRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! MainTableViewCell
-        cell.configureCell(tableViewData[indexPath.row])
+        cell.configureCell(filteredData[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }
@@ -62,8 +73,19 @@ extension SearchViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        vc.data = tableViewData[indexPath.row]
+        vc.data = filteredData[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+}
+
+//MARK: UISearchbarDelegete
+extension SearchViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let searchData = mainData.filter{ $0.title.contains(searchText)}
+        filteredData = searchText.isEmpty ? mainData : searchData
+        tableView.reloadData()
     }
     
 }

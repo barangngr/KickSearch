@@ -23,6 +23,7 @@
 		66C24E062512620E00B692D7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24E052512620E00B692D7 /* Date.swift */; };
 		66C24E082512624900B692D7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24E072512624900B692D7 /* String.swift */; };
 		66C24E0A2513458900B692D7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24E092513458900B692D7 /* DetailViewController.swift */; };
+		66C24E0D2513979800B692D7 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24E0C2513979800B692D7 /* UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		66C24E052512620E00B692D7 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		66C24E072512624900B692D7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		66C24E092513458900B692D7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		66C24E0C2513979800B692D7 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 			children = (
 				66C24E052512620E00B692D7 /* Date.swift */,
 				66C24E072512624900B692D7 /* String.swift */,
+				66C24E0C2513979800B692D7 /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				66C24E0125125CA100B692D7 /* MainTableViewCell.swift in Sources */,
 				66C24DFA2512538700B692D7 /* Requests.swift in Sources */,
 				66C24DC42512326300B692D7 /* SceneDelegate.swift in Sources */,
+				66C24E0D2513979800B692D7 /* UITableView.swift in Sources */,
 				66C24E0A2513458900B692D7 /* DetailViewController.swift in Sources */,
 				66C24DFD251253CD00B692D7 /* MainResponse.swift in Sources */,
 				66C24E062512620E00B692D7 /* Date.swift in Sources */,

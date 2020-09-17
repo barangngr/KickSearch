@@ -44,7 +44,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="219382" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYh-fu-MBt" userLabel="BackersLabel">
                                         <rect key="frame" x="332" y="0.0" width="42" height="12.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
-                                        <color key="textColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.62692636986301364" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.48994006849999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>

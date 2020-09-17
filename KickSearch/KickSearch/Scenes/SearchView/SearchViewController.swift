@@ -11,11 +11,13 @@ import UIKit
 class SearchViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var filterViewHeight: NSLayoutConstraint!
     
     private var mainData: [MainResponse] = []
     private var filteredData: [MainResponse] = []
     private var sortedData: [MainResponse] = []
     private var isSorted = false
+    private var isFiltered = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +58,9 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func filterButtonAction(_ sender: UIButton) {
-        
+        filterViewHeight.constant = isFiltered ? 1 : 50
+        self.loadViewIfNeeded()
+        isFiltered = !isFiltered
     }
     
 }

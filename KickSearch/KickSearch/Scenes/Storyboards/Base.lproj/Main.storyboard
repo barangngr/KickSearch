@@ -42,7 +42,6 @@
                                         <state key="normal" backgroundImage="filter"/>
                                         <connections>
                                             <action selector="filterButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5BK-Sp-Yn0"/>
-                                            <segue destination="NwL-QH-o8v" kind="show" id="xsQ-cW-kEW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -61,8 +60,61 @@
                                     <constraint firstAttribute="height" constant="45" id="sx1-uQ-7ZI"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="99t-Ol-irF" userLabel="FillterView">
+                                <rect key="frame" x="0.0" y="130" width="414" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3aB-zQ-Tf2">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQo-Vd-GuI">
+                                                <rect key="frame" x="0.0" y="16.5" width="83" height="28"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title="USD">
+                                                    <color key="titleColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.48994006849999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjU-fx-0ql">
+                                                <rect key="frame" x="83" y="16.5" width="82.5" height="28"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title="EUR">
+                                                    <color key="titleColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.48994006849999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUI-8e-EH4">
+                                                <rect key="frame" x="165.5" y="16.5" width="83" height="28"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title="CAD">
+                                                    <color key="titleColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.48994006849999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXn-ez-t5P">
+                                                <rect key="frame" x="248.5" y="16.5" width="82.5" height="28"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title="GBP">
+                                                    <color key="titleColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.48994006849999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSf-nk-qty">
+                                                <rect key="frame" x="331" y="16.5" width="83" height="28"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title="AUD">
+                                                    <color key="titleColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.48994006849999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="3aB-zQ-Tf2" firstAttribute="leading" secondItem="99t-Ol-irF" secondAttribute="leading" id="59y-xA-Teh"/>
+                                    <constraint firstAttribute="height" constant="50" id="b2z-s0-IPC"/>
+                                    <constraint firstAttribute="bottom" secondItem="3aB-zQ-Tf2" secondAttribute="bottom" constant="-11" id="eJo-JN-TKT"/>
+                                    <constraint firstItem="3aB-zQ-Tf2" firstAttribute="top" secondItem="99t-Ol-irF" secondAttribute="top" id="iBj-FH-lkC"/>
+                                    <constraint firstAttribute="trailing" secondItem="3aB-zQ-Tf2" secondAttribute="trailing" id="ibD-Ze-y3Q"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vxZ-Rs-Sgq">
-                                <rect key="frame" x="0.0" y="133" width="414" height="763"/>
+                                <rect key="frame" x="0.0" y="180" width="414" height="716"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="0gH-Kt-Qs0"/>
@@ -72,18 +124,23 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="99t-Ol-irF" firstAttribute="leading" secondItem="VEH-Xs-nTw" secondAttribute="leading" id="1co-8g-nro"/>
                             <constraint firstItem="vxZ-Rs-Sgq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5yr-vq-d3M"/>
                             <constraint firstItem="VEH-Xs-nTw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gcq-b5-Gmz"/>
+                            <constraint firstItem="vxZ-Rs-Sgq" firstAttribute="top" secondItem="99t-Ol-irF" secondAttribute="bottom" id="SvO-bZ-z07"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VEH-Xs-nTw" secondAttribute="trailing" id="Vol-HZ-yrg"/>
+                            <constraint firstItem="99t-Ol-irF" firstAttribute="centerX" secondItem="VEH-Xs-nTw" secondAttribute="centerX" id="dg9-qF-wuY"/>
                             <constraint firstItem="VEH-Xs-nTw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="e3p-1y-ljt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vxZ-Rs-Sgq" secondAttribute="bottom" constant="-34" id="hL1-8x-AfE"/>
-                            <constraint firstItem="vxZ-Rs-Sgq" firstAttribute="top" secondItem="VEH-Xs-nTw" secondAttribute="bottom" id="jwL-hq-Qcg"/>
+                            <constraint firstItem="99t-Ol-irF" firstAttribute="trailing" secondItem="VEH-Xs-nTw" secondAttribute="trailing" id="jPm-JD-UOQ"/>
+                            <constraint firstItem="99t-Ol-irF" firstAttribute="top" secondItem="VEH-Xs-nTw" secondAttribute="bottom" constant="-3" id="sS1-NU-Da1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vxZ-Rs-Sgq" secondAttribute="trailing" id="tMi-fv-brs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="KickSearch" id="iMA-83-eHT"/>
                     <connections>
+                        <outlet property="filterViewHeight" destination="b2z-s0-IPC" id="vg1-dk-Pyg"/>
                         <outlet property="tableView" destination="vxZ-Rs-Sgq" id="y0c-tP-3ve"/>
                     </connections>
                 </viewController>
@@ -100,13 +157,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default2-1" translatesAutoresizingMaskIntoConstraints="NO" id="tae-qB-L0t">
-                                <rect key="frame" x="25" y="93" width="364" height="130"/>
+                                <rect key="frame" x="25" y="49" width="364" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="qea-He-3Yx"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PVe-8A-4dd">
-                                <rect key="frame" x="15" y="253" width="384" height="362.5"/>
+                                <rect key="frame" x="15" y="209" width="384" height="362.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Catalysts, Explorers &amp; Secret Keepers: Women of SF" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxw-UY-rVY">
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="50.5"/>

@@ -10,14 +10,22 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
-    var tableViewData: [MainResponse] = []
     @IBOutlet weak var tableView: UITableView!
     
-
+    var tableViewData: [MainResponse] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableView()
+        getData()
+    }
+    
+    private func configureTableView() {
         tableView.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "listCell")
         tableView.separatorStyle = .none
+    }
+    
+    private func getData() {
         Request.shared.getData { (isSuccess, response) in
             print("")
             if isSuccess {
@@ -29,6 +37,7 @@ class SearchViewController: UIViewController {
 
 }
 
+//MARK: UITableViewDataSource
 extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,7 +53,7 @@ extension SearchViewController: UITableViewDataSource {
 
 }
 
-
+//MARK: UITableViewDelegate
 extension SearchViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

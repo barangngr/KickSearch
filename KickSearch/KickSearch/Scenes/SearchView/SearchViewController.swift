@@ -12,6 +12,8 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var filterViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var filterView: FilterView!
+    
     
     private var mainData: [MainResponse] = []
     private var filteredData: [MainResponse] = []
@@ -28,6 +30,7 @@ class SearchViewController: UIViewController {
     private func configureTableView() {
         tableView.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "listCell")
         tableView.separatorStyle = .none
+        filterView.delegete = self
     }
     
     private func getData() {
@@ -58,7 +61,7 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func filterButtonAction(_ sender: UIButton) {
-        filterViewHeight.constant = isFiltered ? 1 : 50
+        filterViewHeight.constant = isFiltered ? 0 : 50
         self.loadViewIfNeeded()
         isFiltered = !isFiltered
     }
@@ -104,6 +107,15 @@ extension SearchViewController: UISearchBarDelegate {
         filteredData = searchText.isEmpty ? mainData : searchData
         sortedData = filteredData
         tableView.reloadData()
+    }
+    
+}
+
+//MARK: FilterViewDelegete
+extension SearchViewController: FilterViewDelegete {
+    
+    func getButtonTag(senderTag: Int) {
+        print(senderTag)
     }
     
 }

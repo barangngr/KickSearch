@@ -14,6 +14,8 @@ class SearchViewController: UIViewController {
     
     private var mainData: [MainResponse] = []
     private var filteredData: [MainResponse] = []
+    private var sortedData: [MainResponse] = []
+    private var isSorted = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +30,10 @@ class SearchViewController: UIViewController {
     
     private func getData() {
         Request.shared.getData { (isSuccess, response) in
-            print("")
             if isSuccess {
                 self.mainData = response!
                 self.filteredData = self.mainData
+                self.sortedData = self.mainData
                 self.tableView.reloadData()
             }
         }
@@ -45,7 +47,18 @@ class SearchViewController: UIViewController {
         }
         return filteredData.count
     }
-
+    
+    @IBAction func sortButtonAction(_ sender: UIButton) {
+        isSorted = !isSorted
+        let sortedData2 = filteredData.sorted(by: {$0.title < $1.title})
+        filteredData = isSorted ? sortedData2 : sortedData
+        tableView.reloadData()
+    }
+    
+    @IBAction func filterButtonAction(_ sender: UIButton) {
+        
+    }
+    
 }
 
 //MARK: UITableViewDataSource
@@ -85,6 +98,7 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let searchData = mainData.filter{ $0.title.contains(searchText)}
         filteredData = searchText.isEmpty ? mainData : searchData
+        sortedData = filteredData
         tableView.reloadData()
     }
     

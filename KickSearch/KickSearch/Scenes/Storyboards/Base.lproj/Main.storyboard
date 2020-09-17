@@ -29,6 +29,9 @@
                                         <rect key="frame" x="326" y="6" width="35" height="33"/>
                                         <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="sort"/>
+                                        <connections>
+                                            <action selector="sortButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XlG-ot-cgE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4C-ri-L0W" userLabel="FilterButton">
                                         <rect key="frame" x="369" y="6" width="35" height="33"/>
@@ -38,6 +41,7 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="filter"/>
                                         <connections>
+                                            <action selector="filterButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5BK-Sp-Yn0"/>
                                             <segue destination="NwL-QH-o8v" kind="show" id="xsQ-cW-kEW"/>
                                         </connections>
                                     </button>

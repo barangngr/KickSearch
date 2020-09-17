@@ -87,7 +87,7 @@
         <!--Detail View Controller-->
         <scene sceneID="dFA-nl-7ml">
             <objects>
-                <viewController id="NwL-QH-o8v" customClass="DetailViewController" customModule="KickSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NwL-QH-o8v" customClass="DetailViewController" customModule="KickSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5tu-zH-G3Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,6 +182,9 @@
                                         <state key="normal" title="Go to Website">
                                             <color key="titleColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.48994006849999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="goWebsiteButton:" destination="NwL-QH-o8v" eventType="touchUpInside" id="ZLe-sJ-4UN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -198,6 +201,18 @@
                         <viewLayoutGuide key="safeArea" id="2lZ-hE-gVs"/>
                     </view>
                     <navigationItem key="navigationItem" id="pum-Sw-ONB"/>
+                    <connections>
+                        <outlet property="amountLabel" destination="T9y-rj-y2f" id="gEF-YB-3nh"/>
+                        <outlet property="backersLabel" destination="5UL-Pa-57G" id="9nC-Dk-7Pb"/>
+                        <outlet property="blurbLabel" destination="uU2-lf-S44" id="18H-JF-vRf"/>
+                        <outlet property="byLabel" destination="NzZ-IA-u9T" id="bCb-xD-YrM"/>
+                        <outlet property="countryLabel" destination="WbI-JE-Ybq" id="gnG-oh-oqw"/>
+                        <outlet property="currencyLabel" destination="1Fe-66-2tm" id="3Aa-k1-fkv"/>
+                        <outlet property="endDateLabel" destination="ecE-Bl-xFA" id="Ze3-lf-WVN"/>
+                        <outlet property="locationLabel" destination="yyY-KU-2jj" id="6f2-8c-dhq"/>
+                        <outlet property="titleLabel" destination="Cxw-UY-rVY" id="JzB-dA-wqD"/>
+                        <outlet property="typeLabel" destination="sju-vt-VuR" id="AXZ-HJ-kmL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2o8-OH-pGf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

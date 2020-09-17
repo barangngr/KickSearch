@@ -147,9 +147,9 @@
 		66C24DF1251232EE00B692D7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				66C24E0B2513927200B692D7 /* Storyboards */,
 				66C24DF4251234DE00B692D7 /* SearchView */,
 				66C24DF5251234F800B692D7 /* DetailView */,
-				66C24DC72512326300B692D7 /* Main.storyboard */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -230,6 +230,14 @@
 				66C24E072512624900B692D7 /* String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		66C24E0B2513927200B692D7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				66C24DC72512326300B692D7 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

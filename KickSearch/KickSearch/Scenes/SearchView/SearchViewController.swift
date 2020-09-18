@@ -10,39 +10,31 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
+    //MARK: IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var filterViewHeight: NSLayoutConstraint!
     @IBOutlet weak var filterView: FilterView!
     
-    private var baseData: [MainResponse] = []
-    private var mainData: [MainResponse] = []
+    //MARK: Variables
     private var filteredData: [MainResponse] = []
-    private var handledData: [MainResponse] = []
-    private var isSorted = false
-    private var isFiltered = false
+    private lazy var presenter = SearchViewPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
+        presenter.load()
+    }
+    
+    private func configure() {
+        filterView.delegete = self
+        presenter.delegete = self
+        
         configureTableView()
-        getData()
     }
     
     private func configureTableView() {
         tableView.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "listCell")
         tableView.separatorStyle = .none
-        filterView.delegete = self
-    }
-    
-    private func getData() {
-        Request.shared.getData { (isSuccess, response) in
-            if isSuccess {
-                self.mainData = response!
-                self.filteredData = self.mainData
-                self.handledData = self.mainData
-                self.baseData = self.mainData
-                self.tableView.reloadData()
-            }
-        }
     }
     
     private func setNumberOfRows() -> Int {
@@ -54,27 +46,15 @@ class SearchViewController: UIViewController {
         return filteredData.count
     }
     
-    private func setDatas(_ isFiltered: Bool) {
-        if isFiltered {
-            mainData = baseData
-            handledData = baseData
-            filteredData = baseData
-            tableView.reloadData()
-        }
-    }
-  
+    //MARK: Actions
     @IBAction func sortButtonAction(_ sender: UIButton) {
-        isSorted = !isSorted
-        let sortedData2 = handledData.sorted(by: {$0.title < $1.title})
-        filteredData = isSorted ? sortedData2 : handledData
-        tableView.reloadData()
+        //Default olarak Backers sayısına göre sıralı gelen datayı, titlle baz alınarak alfabetik sıraya sokma işlemi yapıllmıştır.
+        presenter.sortButtonResponse()
     }
     
     @IBAction func filterButtonAction(_ sender: UIButton) {
-        filterViewHeight.constant = isFiltered ? 0 : 50
-        self.loadViewIfNeeded()
-        setDatas(isFiltered)
-        isFiltered = !isFiltered
+        //Filtreleme ekranında reponse içerisindeki currency baz alınarak basit bir filtreleme seçeneği sunulmuştur.
+        presenter.filterButtonHeightResponse(viewHeight: Float(filterViewHeight.constant))
     }
     
 }
@@ -114,12 +94,8 @@ extension SearchViewController: UITableViewDelegate {
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let searchData = mainData.filter{ $0.title.contains(searchText)}
-        filteredData = searchText.isEmpty ? mainData : searchData
-        handledData = filteredData
-        tableView.reloadData()
+        presenter.searchBarResponse(searchText)
     }
-    
     
 }
 
@@ -127,26 +103,24 @@ extension SearchViewController: UISearchBarDelegate {
 extension SearchViewController: FilterViewDelegete {
     
     func getButtonTag(senderTag: Int) {
-        var filterWord = ""
-        
-        switch senderTag {
-        case 0:
-            filterWord = "usd"
-        case 1:
-            filterWord = "eur"
-        case 2:
-            filterWord = "cad"
-        case 3:
-            filterWord = "gbp"
-        default:
-            filterWord = "cad"
+        presenter.filterButtonResponse(senderTag: senderTag)
+    }
+    
+}
+
+//MARK: SearchViewPresenterDelegete
+extension SearchViewController: SearchViewPresenterDelegete {
+    
+    func handleOutput(_ output: PresenterOutput) {
+        switch output {
+        case .updateData(let data):
+            filteredData = data
+            tableView.reloadData()
+
+        case .filterButtonResponse(let height):
+            filterViewHeight.constant = CGFloat(height)
+            self.loadViewIfNeeded()
         }
-        
-        let currencyData = baseData.filter{ $0.currency == filterWord }
-        filteredData = currencyData
-        handledData = currencyData
-        mainData = currencyData
-        tableView.reloadData()
     }
     
 }

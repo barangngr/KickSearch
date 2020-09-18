@@ -26,6 +26,7 @@
 		66C24E0D2513979800B692D7 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24E0C2513979800B692D7 /* UITableView.swift */; };
 		66C24E112513A7A700B692D7 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C24E102513A7A700B692D7 /* FilterView.xib */; };
 		66C24E132513A7B700B692D7 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24E122513A7B700B692D7 /* FilterView.swift */; };
+		66C24E152514D42200B692D7 /* SearchViewContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24E142514D42200B692D7 /* SearchViewContracts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		66C24E0C2513979800B692D7 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		66C24E102513A7A700B692D7 /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
 		66C24E122513A7B700B692D7 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		66C24E142514D42200B692D7 /* SearchViewContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewContracts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +124,10 @@
 			isa = PBXGroup;
 			children = (
 				66C24DF3251233A700B692D7 /* App */,
-				66C24DF82512533600B692D7 /* API */,
+				66C24DF82512533600B692D7 /* Networking */,
 				66C24DFB251253AF00B692D7 /* Models */,
-				66C24E03251261F400B692D7 /* Helpers */,
+				66C24E03251261F400B692D7 /* Utilities */,
+				66C24E0E2513A77C00B692D7 /* UIComponents */,
 				66C24DF1251232EE00B692D7 /* Scenes */,
 				66C24DF2251232F100B692D7 /* Resources */,
 				66C24DCF2512326800B692D7 /* Info.plist */,
@@ -153,7 +156,6 @@
 		66C24DF1251232EE00B692D7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				66C24E0E2513A77C00B692D7 /* UIComponents */,
 				66C24E0B2513927200B692D7 /* Storyboards */,
 				66C24DF4251234DE00B692D7 /* SearchView */,
 				66C24DF5251234F800B692D7 /* DetailView */,
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				66C24DFE25125C7E00B692D7 /* Cells */,
+				66C24E142514D42200B692D7 /* SearchViewContracts.swift */,
 				66C24DC52512326300B692D7 /* SearchViewController.swift */,
 				66C24DF62512355500B692D7 /* SearchViewPresenter.swift */,
 			);
@@ -197,12 +200,12 @@
 			path = DetailView;
 			sourceTree = "<group>";
 		};
-		66C24DF82512533600B692D7 /* API */ = {
+		66C24DF82512533600B692D7 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				66C24DF92512538700B692D7 /* Requests.swift */,
 			);
-			path = API;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		66C24DFB251253AF00B692D7 /* Models */ = {
@@ -222,12 +225,12 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		66C24E03251261F400B692D7 /* Helpers */ = {
+		66C24E03251261F400B692D7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				66C24E04251261F900B692D7 /* Extensions */,
 			);
-			path = Helpers;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		66C24E04251261F900B692D7 /* Extensions */ = {
@@ -403,6 +406,7 @@
 				66C24DC22512326300B692D7 /* AppDelegate.swift in Sources */,
 				66C24E082512624900B692D7 /* String.swift in Sources */,
 				66C24E132513A7B700B692D7 /* FilterView.swift in Sources */,
+				66C24E152514D42200B692D7 /* SearchViewContracts.swift in Sources */,
 				66C24E0125125CA100B692D7 /* MainTableViewCell.swift in Sources */,
 				66C24DFA2512538700B692D7 /* Requests.swift in Sources */,
 				66C24DC42512326300B692D7 /* SceneDelegate.swift in Sources */,

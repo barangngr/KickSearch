@@ -39,7 +39,7 @@ class FilterView: UIView {
         let btnArray: [UIButton] = [usdButton, eurButton, cadButton, gbpButton, audButton]
         for i in btnArray {
             if tag == i.tag {
-                i.backgroundColor = .purple
+                i.backgroundColor = UIColor.black.withAlphaComponent(0.5)
                 i.layer.cornerRadius = (i.frame.height)/2
             } else {
                 i.backgroundColor = .clear

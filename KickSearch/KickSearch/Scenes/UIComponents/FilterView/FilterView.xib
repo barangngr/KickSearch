@@ -13,7 +13,7 @@
                 <outlet property="cadButton" destination="C4w-iJ-SdK" id="5b6-cV-sBa"/>
                 <outlet property="eurButton" destination="Wo2-J5-DAj" id="pG2-g1-GEE"/>
                 <outlet property="gbpButton" destination="aah-Jf-WD3" id="w5N-a0-Nob"/>
-                <outlet property="usdButton" destination="4Xc-bX-efq" id="cIo-DE-SAz"/>
+                <outlet property="usdButton" destination="Vhm-04-qYk" id="ErI-Ma-apI"/>
                 <outlet property="view" destination="iN0-l3-epB" id="CbU-n0-UzB"/>
             </connections>
         </placeholder>
@@ -22,21 +22,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Esd-mi-LBj">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Esd-mi-LBj">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xc-bX-efq">
-                            <rect key="frame" x="0.0" y="0.0" width="83" height="50"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhm-04-qYk">
+                            <rect key="frame" x="0.0" y="16" width="83" height="28"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <state key="normal" title="USD">
                                 <color key="titleColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.48994006849999999" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
-                                <action selector="buttonActions:" destination="-1" eventType="touchUpInside" id="LLl-67-2gT"/>
+                                <action selector="buttonActions:" destination="-1" eventType="touchUpInside" id="ysf-E8-kjl"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wo2-J5-DAj">
-                            <rect key="frame" x="83" y="0.0" width="82.5" height="50"/>
+                            <rect key="frame" x="83" y="16" width="82.5" height="28"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <state key="normal" title="EUR">
                                 <color key="titleColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.48994006849999999" colorSpace="custom" customColorSpace="sRGB"/>
@@ -46,7 +46,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4w-iJ-SdK">
-                            <rect key="frame" x="165.5" y="0.0" width="83" height="50"/>
+                            <rect key="frame" x="165.5" y="16" width="83" height="28"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <state key="normal" title="CAD">
                                 <color key="titleColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.48994006849999999" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,7 +56,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aah-Jf-WD3">
-                            <rect key="frame" x="248.5" y="0.0" width="82.5" height="50"/>
+                            <rect key="frame" x="248.5" y="16" width="82.5" height="28"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <state key="normal" title="GBP">
                                 <color key="titleColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.48994006849999999" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,7 +66,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Dr-tB-EFX">
-                            <rect key="frame" x="331" y="0.0" width="83" height="50"/>
+                            <rect key="frame" x="331" y="16" width="83" height="28"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <state key="normal" title="AUD">
                                 <color key="titleColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.48994006849999999" colorSpace="custom" customColorSpace="sRGB"/>
@@ -83,7 +83,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Esd-mi-LBj" secondAttribute="trailing" id="FJJ-WC-W9g"/>
                 <constraint firstItem="Esd-mi-LBj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KjZ-dj-Oqp"/>
                 <constraint firstItem="Esd-mi-LBj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fP9-ao-3yz"/>
-                <constraint firstAttribute="bottom" secondItem="Esd-mi-LBj" secondAttribute="bottom" id="wdX-jy-apm"/>
+                <constraint firstAttribute="bottom" secondItem="Esd-mi-LBj" secondAttribute="bottom" constant="-10" id="wdX-jy-apm"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

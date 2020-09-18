@@ -115,7 +115,9 @@ extension SearchViewController: UISearchBarDelegate {
 extension SearchViewController: FilterViewDelegete {
     
     func getButtonTag(senderTag: Int) {
-        print(senderTag)
+        let currencyData = filteredData.filter{ $0.currency == "eur" }
+        filteredData = currencyData
+        tableView.reloadData()
     }
     
 }

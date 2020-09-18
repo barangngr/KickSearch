@@ -31,6 +31,7 @@ class SearchViewController: UIViewController {
         presenter.delegete = self
         
         configureTableView()
+        showHUD()
     }
     
     private func configureTableView() {
@@ -116,8 +117,11 @@ extension SearchViewController: SearchViewPresenterDelegete {
         switch output {
         case .updateData(let data):
             filteredData = data
-            tableView.reloadData()
-
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.hideHUD()
+            }
+            
         case .filterButtonResponse(let height):
             filterViewHeight.constant = CGFloat(height)
             self.loadViewIfNeeded()

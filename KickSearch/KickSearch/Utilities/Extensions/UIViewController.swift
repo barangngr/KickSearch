@@ -8,6 +8,8 @@
 
 import UIKit
 
+fileprivate var hudView: UIView?
+
 extension UIViewController {
     
     func keyboardConfigure() {
@@ -18,6 +20,25 @@ extension UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    func showHUD() {
+        DispatchQueue.main.async {
+            hudView = UIView(frame: self.view.bounds)
+            hudView?.backgroundColor = UIColor.clear
+            
+            let hud = UIActivityIndicatorView(style: .large)
+            hud.center = hudView!.center
+            hud.color = .systemPink
+            hud.startAnimating()
+            hudView?.addSubview(hud)
+            self.view.addSubview(hudView!)
+        }
+    }
+    
+    func hideHUD() {
+        hudView?.removeFromSuperview()
+        hudView = nil
     }
     
 }

@@ -23,6 +23,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         configure()
         presenter.load()
+        keyboardConfigure()
     }
     
     private func configure() {

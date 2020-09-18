@@ -27,6 +27,7 @@
 		66C24E112513A7A700B692D7 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C24E102513A7A700B692D7 /* FilterView.xib */; };
 		66C24E132513A7B700B692D7 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24E122513A7B700B692D7 /* FilterView.swift */; };
 		66C24E152514D42200B692D7 /* SearchViewContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24E142514D42200B692D7 /* SearchViewContracts.swift */; };
+		66C24E182514EF2400B692D7 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C24E172514EF2300B692D7 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		66C24E102513A7A700B692D7 /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
 		66C24E122513A7B700B692D7 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		66C24E142514D42200B692D7 /* SearchViewContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewContracts.swift; sourceTree = "<group>"; };
+		66C24E172514EF2300B692D7 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 				66C24E052512620E00B692D7 /* Date.swift */,
 				66C24E072512624900B692D7 /* String.swift */,
 				66C24E0C2513979800B692D7 /* UITableView.swift */,
+				66C24E172514EF2300B692D7 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C24E182514EF2400B692D7 /* UIViewController.swift in Sources */,
 				66C24DC62512326300B692D7 /* SearchViewController.swift in Sources */,
 				66C24DF72512355500B692D7 /* SearchViewPresenter.swift in Sources */,
 				66C24DC22512326300B692D7 /* AppDelegate.swift in Sources */,

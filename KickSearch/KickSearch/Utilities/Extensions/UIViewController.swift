@@ -27,7 +27,7 @@ extension UIViewController {
             hudView = UIView(frame: self.view.bounds)
             hudView?.backgroundColor = UIColor.clear
             
-            let hud = UIActivityIndicatorView(style: .large)
+            let hud = UIActivityIndicatorView(style: .whiteLarge)
             hud.center = hudView!.center
             hud.color = .systemPink
             hud.startAnimating()
